@@ -1,0 +1,51 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.container{
+    display: inline-block;
+    margin: 10% 0% 0% 10%;
+    border: 3px solid #888;
+    border-radius: 3px;
+}
+
+.content{
+    padding: 20px;
+}
+
+.section-1{
+
+}
+
+.section-1 button{
+    color: #000;
+    background-color: #090;
+    border: .25px solid #222;
+}
+
+.section-2{
+
+}
+
+.homework{
+    margin: 3px;
+    border: .5px solid #888;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px #888;
+}
+
+.content-2{
+    padding: 5px;
+}
+
+.content-2 p{
+    display: inline;
+}
+.section-3{
+
+}
+
+.work-f{
+
+}
