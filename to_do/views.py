@@ -2,4 +2,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hola desde to-do")
+    return HttpResponse(render(request=request,template_name='index.html',context={}))

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/to-do.css' %}">
+</head>
+<body>
+    <div class="container card card-gray">
+        <div class="tarea">
+            <h1 class="titulo"> &#9200;Nueva tarea:</h1>
+            <input id="tarea" type="text" >
+            <input id="agregar" type="button" value="&#9996; Agregar tarea">
+        </div>
+        <div class="pendientes">
+            <h2 class="titulo">Tareas pendientes: </h2>
+            <div id="pendientes" class="list">
+                <div class="card c-tarea card-white">
+                    <p class="tarea">Nombre de la tarea</p>
+                    <button class="fin">&#9989;</button>
+                    <button class="eliminar">&#10060;</button>
+                </div>
+                <div class="card c-tarea card-white">
+                    <p class="tarea">Nombre de la tarea</p>
+                    <button class="fin">&#9989;</button>
+                    <button class="eliminar">&#10060;</button>
+                </div>
+                <div class="card c-tarea card-white">
+                    <p class="tarea">Nombre de la tarea</p>
+                    <button class="fin">&#9989;</button>
+                    <button class="eliminar">&#10060;</button>
+                </div>
+            </div>
+        </div>
+        <div class="finalizadas">
+            <h2 class="titulo">Tareas finalizadas: </h2>
+            <div id="finalizadas" class="list">
+                <div class="card">
+                    <p> &#11088;Nombre de la tarea</p>
+                </div>
+                <div class="card">
+                    <p>&#11088; Nombre de la tarea</p>
+                </div>
+                <div class="card">
+                    <p>&#11088; Nombre de la tarea</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="{% static 'js/to_do.js' %}"> </script>
+</body>
+</html>

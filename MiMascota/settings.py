@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MiMascota.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./rastreador/templates',],
+        'DIRS': ['./rastreador/templates','./to_do/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

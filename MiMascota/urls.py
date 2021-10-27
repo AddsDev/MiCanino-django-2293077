@@ -20,7 +20,7 @@ from . import views
 
 urlpatterns = [
     path('',views.index),
-    path('<str:query>',views.index),
+    path('query/<str:query>',views.index2),
     path('admin/', admin.site.urls),
     path('rastreador/', include('rastreador.urls')),
     path('to-do/', include('to_do.urls'))
