@@ -1,142 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <!-- <link rel="stylesheet" type="text/css" href="actividad_2.css" title="style" /> -->
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/actividad_2.css' %}" title="style" />
     <title>Lorem ipsum</title>
-    <style>
-        /* === IMPORTANTE LEER ====================================================
-  ___ Recuerden de no utilizar selectores por elementos o etiquetas html __
-  ___ Se recomienda cambiarlas por clases ___
-
-  Modifique los estilos base desde aquí lo que requieran.
-  ================================================================== */
-    ul, ul li { margin: 0; padding: 0; list-style: none; }
-    h1, h2, h3, p, form { margin: 0; padding: 0; }
-    .clear { clear: both; }
-    img { border: none; }
-
-    #contenedor {
-    width: 90%;
-    max-width: 900px;
-    width: auto;
-    margin: 0 auto;
-    }
-
-    #cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
-    border: 2px solid #777;
-    }
-
-    #cabecera { clear: both; }
-    #menu { clear: both; }
-    #lateral { float: left; width: 20%; }
-    #contenido { float: right; width: 78%; }
-    #contenido #principal { float: left; width: 78%; }
-    #contenido #secundario { float: right; width: 20%; }
-    #pie { clear: both; }
-
-
-    #cabecera #logo { float: left; }
-    #cabecera #buscador { float: right; }
-
-
-    #menu ul#menu_principal li { display: inline; float: left; }
-
-
-    #contenido #principal .articulo img { width: 100px; float: left; }
-
-
-    #pie .enlaces   { float: left; }
-    #pie .copyright { float: right; }
-
-    /* === IMPORTANTE LEER ===================================================
-    Modifique los estilos desde aquí lo que requieran.
-    ================================================================== */
-    #cabecera,
-    #menu,
-    #lateral,
-    #lateral #noticias,
-    #lateral #publicidad,
-    #contenido,
-    #contenido #principal,
-    #contenido #secundario,
-    #pie {
-    padding: .5em;
-    border: none;
-    }
-
-    #lateral {
-    padding: 0;
-    }
-
-    #cabecera {
-    padding: 1em;
-    }
-
-    #cabecera h1 {
-    background: #fff;
-    }
-
-    #cabecera h1 span {
-    visibility: visible;
-    }
-
-    #menu {
-    margin-bottom: .5em;
-    border-bottom: 1px solid #004C99;
-    background: #63acf5;
-    }
-
-    #contenido {
-    width: 77%;
-    padding: 0;
-    }
-
-    #noticias > p > a {
-    display: block;
-    }
-
-    #contenido #principal {
-    width: 73%;
-    }
-
-    #contenido #secundario {
-    border: 1px solid #C60;
-    }
-
-    #contenido #secundario h2 {
-        background: #DB905C;
-        padding: .2em;
-    }
-
-    #pie {
-    padding: .5em 0;
-    margin-top: 1em;
-    border-top: 1px solid #C5C5C5;
-    border-bottom: 1px solid #C5C5C5;
-    background: #F8F8F8;
-    }
-
-    #contenido #principal .articulo {
-    margin-bottom: 1em;
-    }
-
-    #contenido #principal .articulo img { 
-    margin: .5em;
-    }
-
-    #lateral #noticias {
-    border: 1px solid #C5C5C5;
-    background: #F8F8F8;
-    }
-
-    #lateral #publicidad {
-    margin-top: 1em;
-    border: 1px dashed #C60;
-    background: #FFF6CD;
-    }
-    </style>
 </head>
 
 <body>
@@ -145,11 +15,14 @@
 
         <div id="cabecera">
             <div id="logo">
-                <h1><img width="50" src="img/square.png" alt="logo"> <span>LOGOTIPO</span> </h1>
+                <h1><img width="50" src="{% static 'img/square.png'%}" alt="logo"> <span>LOGOTIPO</span> </h1>
             </div>
             <div id="buscador">
                 <form action="#" method="post">
-                    <input name="busqueda" type="text" /> <input type="submit" value="Buscar">
+                    {% if query is not None %}
+                    <input name="busqueda" type="text" value="{{ query }}" />
+                    {% endif %}
+                    <input type="submit" value="Buscar">
                 </form>
             </div>
             <div class="clear"></div>
@@ -201,7 +74,7 @@
             <div id="principal">
                 <div class="articulo">
                     <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
-                    <img src="img/square.png" alt="Imagen gen�rica" />
+                    <img src="{% static 'img/square.png'%}" alt="Imagen gen�rica" />
                     <p>Nullam est lacus, suscipit ut, dapibus quis, condimentum ac, risus. Vivamus vestibulum, ipsum
                         sollicitudin faucibus pharetra, dolor metus fringilla dui, vel aliquet pede diam tempor tortor.
                     </p>
@@ -214,7 +87,7 @@
                 </div>
                 <div class="articulo">
                     <h2>Vivamus lobortis turpis ac ante fringilla faucibus</h2>
-                    <img src="img/square.png" alt="Imagen generica" />
+                    <img src="{% static 'img/square.png'%}" alt="Imagen generica" />
                     <p>Quisque eget ipsum. Donec commodo, turpis vel venenatis sollicitudin, quam ante convallis justo,
                         sed eleifend justo lectus quis sapien. Ut consequat libero eget est.</p>
                     <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam
@@ -243,12 +116,12 @@
 
         <div id="pie">
             <span class="enlaces">
-                <a href="#"><img width="25" src="img/square.png" alt="Logo red social"> Red Social</a> |
-                <a href="#"><img width="25" src="img/square.png" alt="Logo red social"> Red Social</a> |
-                <a href="#"><img width="25" src="img/square.png" alt="Logo red social"> Red Social</a> |
-                <a href="#"><img width="25" src="img/square.png" alt="Logo red social"> Red Social</a> |
-                <a href="#"><img width="25" src="img/square.png" alt="Logo red social"> Red Social</a> |
-                <a href="#"><img width="25" src="img/square.png" alt="Logo red social"> Red Social</a>
+                <a href="#"><img width="25" src="{% static 'img/square.png'%}" alt="Logo red social"> Red Social</a> |
+                <a href="#"><img width="25" src="{% static 'img/square.png'%}" alt="Logo red social"> Red Social</a> |
+                <a href="#"><img width="25" src="{% static 'img/square.png'%}" alt="Logo red social"> Red Social</a> |
+                <a href="#"><img width="25" src="{% static 'img/square.png'%}" alt="Logo red social"> Red Social</a> |
+                <a href="#"><img width="25" src="{% static 'img/square.png'%}" alt="Logo red social"> Red Social</a> |
+                <a href="#"><img width="25" src="{% static 'img/square.png'%}" alt="Logo red social"> Red Social</a>
             </span>
             <span class="copyright">
                 &copy; Copyright Lorem ipsum

@@ -1,12 +1,11 @@
 from django import template
 from django.shortcuts import render
-from django.template import loader
 from django.http import HttpResponse
+
 
 # Create your views here.
 def index(request):
-    template = loader.get_template('ejemplo/actividad_2.html')
-    return HttpResponse(template.render({},request))
+    return HttpResponse(render(request, 'rastreador/actividad_2.html',{}))
 
 def login(request):
     return HttpResponse("Login")
