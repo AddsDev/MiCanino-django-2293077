@@ -4,7 +4,7 @@
 }
 
 .container{
-    display: inline-block;
+    display: inline-flex;
     margin: 10% 0% 0% 10%;
     border: 3px solid #888;
     border-radius: 3px;
@@ -15,7 +15,7 @@
 }
 
 .section-1{
-
+    
 }
 
 .section-1 button{
@@ -37,11 +37,9 @@
 
 .content-2{
     padding: 5px;
+    display: flex;
 }
 
-.content-2 p{
-    display: inline;
-}
 .section-3{
 
 }
