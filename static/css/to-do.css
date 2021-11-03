@@ -46,3 +46,7 @@
 .titulo{
     font-family: 'Rampart One', cursive;
 }
+.card-checked {
+    background-color: darkgrey;
+    text-decoration: underline;
+}
