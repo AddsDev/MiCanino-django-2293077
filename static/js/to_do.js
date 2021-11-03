@@ -112,6 +112,7 @@ const addListeners = () => {
                         element.setAttribute('hidden','hidden')
                     else if(element.tagName == 'P')
                         element.innerHTML = tempTarea.detalle
+    
 
                 })
                 list_fin.appendChild(div)
@@ -122,18 +123,13 @@ const addListeners = () => {
                 list_pen.removeChild(div)
                 tareas.splice(div.getAttribute('index'), 1)
                 break;
-<<<<<<< HEAD
+         HEAD
         }
         saveLocal()
-
-        
-=======
-        }  
->>>>>>> f807d91dc8102821e0ff77b297693b9e79097619
+        } 
     }
 
 
     // agregar.onclick= ()=>{
     //     list_fin.appendChild(getCard(valor, false))
     // }
-}

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="{% static 'css/to-do.css' %}">
 </head>
 <body>
@@ -16,11 +17,11 @@
         <div class="tarea">
             <h1 class="titulo"> &#9200;Nueva tarea:</h1>
             <input id="tarea" type="text" >
-            <input id="agregar" type="button" value="&#9996; Agregar tarea">
+            <input id="agregar" class="w3-btn w3-red" style="border-radius: 48%;" type="button" value="&#9996; Agregar tarea">
         </div>
         <div class="pendientes">
             <h2 class="titulo">Tareas pendientes: </h2>
-            <div id="pendientes" class="list">
+            <div id="pendientes" class="list"  class="w3-badge w3-margin-left w3-white">
                 {% comment %} <div class="card c-tarea card-white">
                     <p class="tarea">Nombre de la tarea</p>
                     <button class="fin">&#9989;</button>
@@ -42,7 +43,7 @@
             <h2 class="titulo">Tareas finalizadas: </h2>
             <div id="finalizadas" class="list">
                 <div class="card">
-                    <p> &#11088;Nombre de la tarea</p>
+                    <p > &#11088;Nombre de la tarea</p>
                 </div>
                 <div class="card">
                     <p>&#11088; Nombre de la tarea</p>
