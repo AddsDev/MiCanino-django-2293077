@@ -58,6 +58,7 @@ function getCard(valor, opcion) {
     tarea.classList= "tarea"
     eliminar.innerHTML ="&#10060;"
 
+
     card.classList = "card c-tarea card-white"
     tarea.classList = "tarea"
     agregar.classList ="fin"
@@ -121,11 +122,16 @@ const addListeners = () => {
                 list_pen.removeChild(div)
                 tareas.splice(div.getAttribute('index'), 1)
                 break;
+<<<<<<< HEAD
         }
         saveLocal()
 
         
+=======
+        }  
+>>>>>>> f807d91dc8102821e0ff77b297693b9e79097619
     }
+
 
     // agregar.onclick= ()=>{
     //     list_fin.appendChild(getCard(valor, false))
