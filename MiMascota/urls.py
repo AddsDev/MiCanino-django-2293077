@@ -23,5 +23,6 @@ urlpatterns = [
     path('query/<str:query>',views.index2),
     path('admin/', admin.site.urls),
     path('rastreador/', include('rastreador.urls')),
-    path('to-do/', include('to_do.urls'))
+    path('to-do/', include('to_do.urls')),
+    path('blog/', include('blog.urls'))
 ]
