@@ -60,5 +60,5 @@ function loadUsers(usuariosJSON){
         let p = document.createElement('p');
         p.innerHTML = `Nick: ${usuario.username} <br>Nombre: ${usuario.name}`
         div_result.appendChild(p)
-    });
+    })
 }
