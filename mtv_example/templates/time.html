@@ -1,0 +1,16 @@
+{% extends 'home_template.html' %}
+{% block title %}
+    Time : {{time}}
+{% endblock %}
+{% block nav %}
+    {% include 'nav.html' %}
+{% endblock nav %}
+{% block content%}
+    <div>
+            <h1>Fecha desde un MTV</h1>
+            <p>{{time}}</p>
+    </div>
+{% endblock %}
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock footer %}

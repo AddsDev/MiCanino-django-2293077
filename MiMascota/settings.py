@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mtv_example'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'MiMascota.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./rastreador/templates','./to_do/templates','./blog/templates',],
+        'DIRS': ['./rastreador/templates','./to_do/templates',
+        './blog/templates','./mtv_example/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

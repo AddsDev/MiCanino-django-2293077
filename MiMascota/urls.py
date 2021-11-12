@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('rastreador/', include('rastreador.urls')),
     path('to-do/', include('to_do.urls')),
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+    path('mtv/', include('mtv_example.urls'))
 ]
